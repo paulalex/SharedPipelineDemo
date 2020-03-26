@@ -7,8 +7,8 @@ def call(body) {
     body.delegate = pipelineParams
     body()
 
+
     pipeline {
-         pipeline {
         agent any
         stages {
             stage('checkout git') {
@@ -43,6 +43,4 @@ def call(body) {
                 mail to: pipelineParams.email, subject: 'Pipeline failed', body: "${env.BUILD_URL}"
             }
         }
-    }
-    }
 }
