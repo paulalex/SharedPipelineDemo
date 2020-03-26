@@ -19,15 +19,15 @@ def call(body) {
 
             stage('build') {
                 steps {
-                    sh 'mvn clean package -DskipTests=true'
+                    sh 'echo building...'
                 }
             }
 
             stage ('test') {
                 steps {
                     parallel (
-                        "unit tests": { sh 'mvn test' },
-                        "integration tests": { sh 'mvn integration-test' }
+                        "unit tests": { sh 'echo unit test' },
+                        "integration tests": { sh 'echo integration-test' }
                     )
                 }
             }
