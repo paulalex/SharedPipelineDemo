@@ -1,5 +1,3 @@
-#!/usr/bin/env groovy
-
 def call(Map pipelineParams) {
     // evaluate the body block, and collect configuration into the object
 //     def pipelineParams= [:]
