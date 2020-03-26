@@ -1,4 +1,4 @@
-pipeline (
+myPipeline (
     branch: 'master',
     scmUrl: 'https://github.com/paulalex/SharedPipelineDemo',
     email: 'paul@kuruma.co.uk',
